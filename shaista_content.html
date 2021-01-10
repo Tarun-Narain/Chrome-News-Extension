@@ -1,0 +1,33 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>Formget Latest Blogs</title>
+	<script type="text/javascript" src="jquery-3.5.1.js"></script>
+<script type="text/javascript" src="popup_operations.js"></script>	
+<script type="text/javascript" src="content.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	
+	<link rel="stylesheet" href="mycss.css" type="text/css" media="all">
+</head>
+<body id="main-body">
+	<div id="box">
+		<div id="logo">
+			<a href="" style="text-align:center">
+				Page No : <span id="pageNumber">1</span>
+			</a>
+		</div>
+		<div id="blog-head">
+			<i id="previousPage" class="fa fa-angle-double-left" style="font-size:36px; float:left; color:white;" ></i>
+			<i id="nextPage" class="fa fa-angle-double-right" style="font-size:36px; float:right; color:white; margin-right: 11px;" ></i>
+			
+
+			<div id="blog_head_con">
+				<a href="https://F.formget.com/blog" target="_blank">
+					<span class="logo-inner" style="margin-left:-15px;">Shaista's Cyber News</span>
+				</a>
+			</div>
+		</div>
+		<!--Below div used to place RSSfeed data fetched from server-->
+		<div id="feed"></div>
+	</div>
+</body>
+</html>

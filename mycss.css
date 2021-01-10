@@ -1,0 +1,124 @@
+#main-body{
+margin:0;
+}
+#box
+{
+width:400px;
+font-family:raleway,Arial, Helvetica, sans-serif;    
+}
+#feed{
+list-style:none;
+background-color:#FFFFFF;
+margin-top:134px;
+
+}
+li:before{ 
+content:''; 
+display:inline-block; 
+height: 45px;
+width: 45px; 
+background-image:url(img/author.png);
+border-radius:30px; 
+background-size:contain; 
+background-repeat:no-repeat; }
+li{
+border:1px solid #CBCBCB;
+padding:5px;
+box-shadow: 0px 5px 17px 1px #99A3AD, 0px 0px 40px #EEEEEE;
+margin-top: 20px;
+margin: 10px;	
+}
+li:hover{    
+transform: scale(1.02);
+}
+#logo
+{
+margin-top:-12px;
+background-color:#0c79c3;
+padding: 14px;
+z-index:99999;
+align-content: center;
+align-items: center;
+text-align: center;
+position: fixed;
+top: 0;
+left: 0;
+width: 400px;
+}
+#blog-head{
+padding:5px 0 5px 5px;
+background-color:#3C3C3C;
+box-shadow: 0px 5px 17px 1px #505050, 0px 0px 40px #1ABBFF;
+z-index:99999;
+position: fixed;
+top:58px;
+left: 0;
+width: 400px;
+}
+.logo-inner{
+color:#fff;
+font-size: 16px;
+vertical-align: bottom;
+display: inline-block;
+margin-left: 5px;
+padding: 14px;
+}
+.parss-date {
+display: block;
+float: right;
+margin-top: -2px;
+color: #888888;
+}
+.parss-image{
+display: block;
+float: left;
+margin-top: 1px;
+color: #888888;
+
+}
+.parss-title a {
+font-size: 16px;
+margin-top: 12px;
+margin-left: -35px;
+max-height: 38px;
+position: absolute;
+color: #0C79C3;
+overflow: hidden;
+text-overflow: ellipsis;
+   display: -webkit-box;
+ -webkit-line-clamp: 2;
+text-decoration: none;
+display: inline-block;
+width: 275px;
+vertical-align: top;
+}
+.parss-title a:hover
+{
+color:#003399;
+background-color: white;
+padding-bottom: 20px;
+}
+.parss-description{ 
+
+font-size: 17px;
+font-size: 14px;
+color: #8A8A8A;
+-webkit-margin-after: 0.5em;
+-webkit-margin-start: 0px;
+-webkit-margin-end: 0px;
+display: inline-block;
+width: 275px;
+overflow: hidden;
+vertical-align: top;
+margin-left: 70px;
+margin-top: -10px;
+}
+div#blog-head img {
+margin: 0 -10px 7px 0;
+}
+div#logo img {
+margin: 0 34%;
+}
+div#blog_head_con {
+    margin: 0 0 0 30%;
+}
