@@ -1,13 +1,16 @@
 var pageNo=1;
+var query="cyber%20security"
 
 function refreshPage(){
 
-	chrome.runtime.sendMessage({type: "getUrls", pageNo:pageNo}, function(response) {
-
+	chrome.runtime.sendMessage({type: "getUrls", pageNo:pageNo, query:query}, function(response) {
+		
 		$("#pageNumber").html(pageNo)
 
 		console.log("Sent Something")
 		console.log(response)
+		
+		$("#totalResults").html(response.totalResults)
 
 		$("#feed").empty()
 
@@ -21,16 +24,19 @@ function refreshPage(){
 		}
 	});
 }
+
 function nextPage(){
 	pageNo=(pageNo+1)
 	refreshPage();
 }
+
 function previousPage(){
 	if(pageNo<2)
 		return;
 	pageNo=(pageNo-1)
 	refreshPage();
 }
+
 document.addEventListener("click", function(e){
 
 	console.log(e.srcElement.attributes[0].nodeValue)
@@ -41,7 +47,12 @@ document.addEventListener("click", function(e){
 
 		return;
 	}
-
+	if(e.target.id=='queryBoxSubmit'){
+		console.log("Caught Query Box")
+		console.log($("#queryBox").val())
+		query=$("#queryBox").val()
+		refreshPage();
+	}
 	console.log(e)
 	console.log(e.target.id)
 	switch(e.target.id){
