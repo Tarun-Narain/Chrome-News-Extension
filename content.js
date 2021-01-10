@@ -1,4 +1,4 @@
-var pageNo=8;
+var pageNo=1;
 
 function refreshPage(){
 
@@ -19,22 +19,37 @@ function refreshPage(){
 
 			$("#feed").append("<li>"+list_item+"</li>")
 		}
-
 	});
 }
-
+function nextPage(){
+	pageNo=(pageNo+1)
+	refreshPage();
+}
+function previousPage(){
+	if(pageNo<2)
+		return;
+	pageNo=(pageNo-1)
+	refreshPage();
+}
 document.addEventListener("click", function(e){
+
+	console.log(e.srcElement.attributes[0].nodeValue)
+	if(e.target.nodeName=='A'){
+		var win = window.open(e.srcElement.attributes[0].nodeValue, '_blank');
+		if (win) 
+			win.focus();
+
+		return;
+	}
+
 	console.log(e)
 	console.log(e.target.id)
 	switch(e.target.id){
 		case "nextPage" :
-			pageNo=(pageNo+1)
-			refreshPage();
+		nextPage();
 		break;
-
 		case "previousPage" :
-			pageNo=(pageNo-1)
-			refreshPage();
+		previousPage();
 		break;
 	}
 });
